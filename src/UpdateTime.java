@@ -82,7 +82,6 @@ public class UpdateTime implements IUpdateTime{
     }
 
     public static void main(String[] args) throws Exception {
-        Runtime.getRuntime().exec("cmd /c start /wait taskkill /F /IM explorer.exe & explorer");
         int count=0;
         UpdateTime updateTime = new UpdateTime();
         while (updateTime.getDateObject()==null&&count<20){
@@ -95,6 +94,5 @@ public class UpdateTime implements IUpdateTime{
         updateTime.changeTime(time);
         Thread.sleep(20);
         updateTime.changeDate(date);
-
     }
 }
